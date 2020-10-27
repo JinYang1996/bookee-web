@@ -1,85 +1,21 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
+    <div id="vue-det">
+      <li>{{userName}}</li>
+      <li>{{age}}</li>
+      <li>{{details()}}</li>
+      <li v-bind:title="userName">haha</li>
+      <p v-if="seen">看的到我</p>
+    </div>
+    <ol>
+      <li v-for="(value,index) in students" :key="index">
+        {{value.text}},{{index}}
       </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+    </ol>
+    <p>{{inputMessage}}</p>
+    <input type="text" v-model="inputMessage">
+    <button v-on:click="reverseMessage">反转信息</button>
   </div>
 </template>
 
@@ -88,10 +24,28 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      userName:"zhangsan"+new Date().toLocaleString(),
+      age:"18",
+      seen:true,
+      students:[
+        {text:"wangwu"},
+        {text:"lisi"},
+        {text:"二娃"}
+      ],
+      inputMessage:"Hello Vue.js"
     }
-  }
+  },
+  methods:{
+      details:function(){
+        return this.userName+"年龄是"+this.age+"岁";
+      },
+      reverseMessage:function(){
+        this.inputMessage = this.inputMessage.split('').reverse().join('');
+      }
+    }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
