@@ -17,6 +17,7 @@
     <input type="text" v-model="inputMessage">
     <button v-on:click="reverseMessage">反转信息</button>
     <router-link to="/app7">转向app7</router-link>
+    <router-link to="/FormVue">转向FormVue</router-link>
     <router-view></router-view>
   </div>
 </template>
