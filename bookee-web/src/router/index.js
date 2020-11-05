@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import app7 from '@/components/app7'
 import FormVue from '@/components/FormVue'
+import index from '@/components/student/index'
 
 Vue.use(Router)
 
@@ -20,6 +21,10 @@ export default new Router({
         path:'/FormVue',
         component:FormVue
       }]
+    },
+    {
+      path:'/student',
+      component:index
     }
   ]
 })
