@@ -19,6 +19,7 @@
     <router-link to="/app7">转向app7</router-link>
     <router-link to="/FormVue">转向FormVue</router-link>
     <a href="/HomeTables">转向首页</a>
+    <router-link to="/student">转向student</router-link>
     <router-link to="/InputComponent">转向输入组件</router-link>
     <router-view></router-view>
   </div>

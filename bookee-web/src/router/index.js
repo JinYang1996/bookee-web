@@ -5,6 +5,7 @@ import app7 from '@/components/app7'
 import FormVue from '@/components/FormVue'
 import HomeTables from '@/components/HomeTables'
 import InputComponent from '@/components/InputComponent'
+import index from '@/components/student/index'
 
 Vue.use(Router)
 
@@ -30,6 +31,10 @@ export default new Router({
     {
       path:'/InputComponent',
       component:InputComponent
+    },
+    {
+      path:'/student',
+      component:index
     }
   ]
 })
