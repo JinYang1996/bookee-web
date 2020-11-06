@@ -3,11 +3,14 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import app7 from '@/components/app7'
 import FormVue from '@/components/FormVue'
+import HomeTables from '@/components/HomeTables'
+import InputComponent from '@/components/InputComponent'
 
 Vue.use(Router)
 
 export default new Router({
   mode:'history',
+  HomeTables,
   routes: [
     {
       path: '/',
@@ -20,6 +23,13 @@ export default new Router({
         path:'/FormVue',
         component:FormVue
       }]
+    },{
+      path:'/HomeTables',
+      component:HomeTables
+    },
+    {
+      path:'/InputComponent',
+      component:InputComponent
     }
   ]
 })

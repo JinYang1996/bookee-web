@@ -18,6 +18,8 @@
     <button v-on:click="reverseMessage">反转信息</button>
     <router-link to="/app7">转向app7</router-link>
     <router-link to="/FormVue">转向FormVue</router-link>
+    <a href="/HomeTables">转向首页</a>
+    <router-link to="/InputComponent">转向输入组件</router-link>
     <router-view></router-view>
   </div>
 </template>
