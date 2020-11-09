@@ -21,6 +21,7 @@
     <a href="/HomeTables">转向首页</a>
     <router-link to="/student">转向student</router-link>
     <router-link to="/InputComponent">转向输入组件</router-link>
+    <router-link to="/blogIndex">博客首页</router-link>
     <router-view></router-view>
   </div>
 </template>

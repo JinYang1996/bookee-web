@@ -6,6 +6,7 @@ import FormVue from '@/components/FormVue'
 import HomeTables from '@/components/HomeTables'
 import InputComponent from '@/components/InputComponent'
 import index from '@/components/student/index'
+import blogIndex from '@/components/blog/index'
 
 Vue.use(Router)
 
@@ -35,6 +36,10 @@ export default new Router({
     {
       path:'/student',
       component:index
+    },
+    {
+      path:'/blogIndex',
+      component:blogIndex
     }
   ]
 })
